@@ -1,0 +1,53 @@
+@use '../../global/styles';
+@use "sass:map";
+
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  border-bottom: 0.5px solid map.get(styles.$colors, "dark20");
+  padding-inline: 2rem;
+
+  .search__field__container{
+    width: 25%;
+    height: 40px;
+    
+  }
+
+  .nav__icons{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    .icons{
+      position: relative;
+
+      .counter{
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        color: white;
+        font-size: 0.7rem;
+        font-weight: 800;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+
+      }
+      .avatar{
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 0.5px solid map.get(styles.$colors, "dark40");
+
+      }
+    }
+  }
+}
