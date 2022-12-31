@@ -1,0 +1,35 @@
+@use '../../../global/styles.scss';
+@use "sass:map";
+
+.search__form{
+  width: 100%;
+  position: relative;
+
+  .search__field{
+    background-color: white;
+    border: 0.5px solid map.get(styles.$colors, "dark20");
+    border-radius: 7px;
+    width: 100%;
+    padding-left: map.get(styles.$spacings, "padding");
+    padding-right: 15%;
+    font-size: map.get(styles.$sizes, "normal");
+    height: 40px;
+
+    &:focus{
+      border: none;
+      outline-width: 0.5px;
+      outline-color: rgb(197, 196, 196);
+      outline-style: solid;
+
+    }
+  }
+  .search__submit__btn{
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+  }
+
+}
