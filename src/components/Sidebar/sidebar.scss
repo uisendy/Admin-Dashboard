@@ -1,0 +1,64 @@
+@use '../../global/styles';
+@use "sass:map";
+
+.sidebar{
+  flex: 1;
+  min-height: 100vh;
+  border-right: 0.5px solid map.get(styles.$colors, "dark20");
+  background-color: map.get(styles.$colors, "white");
+
+  .top{
+
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    padding-left: map.get(styles.$spacings, "padding");
+
+    .logo{
+      font-weight: 700;
+      font-size: 2rem;
+      color: map.get(styles.$colors, "active");
+      transition: all 0.5s;
+
+      &:hover{
+        color: map.get(styles.$colors, "hover");
+        cursor: pointer;
+      }
+    }
+  }
+
+  .center{
+
+    .menu__links{
+      padding-inline: map.get(styles.$spacings, "padding");
+      display: flex;
+      flex-direction: column;
+
+      .menu__title{
+        text-transform: uppercase;
+        font-weight: 200;
+        font-size: map.get(styles.$sizes, "small");
+        color: map.get(styles.$colors, "dark60");
+        letter-spacing: map.get(styles.$sizes, "tiny");
+        margin-block: map.get(styles.$spacings, "margin");
+      }
+
+      .submenu__links{
+        padding: map.get(styles.$sizes, "very-small");
+        display: flex;
+        align-items: center;
+        gap: map.get(styles.$sizes, "small");
+        cursor: pointer;
+        transition: all 0.5s;
+
+        &:hover{
+          background-color: map.get(styles.$colors, "hover");
+        }
+
+        .icons{
+          color: map.get(styles.$colors, "active");
+        }
+      }
+    }
+  }
+}
